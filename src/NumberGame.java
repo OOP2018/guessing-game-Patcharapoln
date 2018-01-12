@@ -63,6 +63,11 @@ public class NumberGame {
 		return "You should override this method for your game";
     }
 	
+	/**
+	 * Get a time that user guess
+	 * @return a time that user guess
+	 */
+
 	public int getCount() {
 		return 0;
 	}

@@ -1,14 +1,20 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ *Automatically find the secret to any NumberGame 
+ */
 public class GameSolver {
-
+	/**
+	 * play the game
+	 * @param game a game that users want to play
+	 * @return a secret number guess by users
+	 */
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
 		int guess = game.getUpperBound()/2;
 		int value = guess/2;
 		System.out.println(game.toString());
-		// This is just an example.
 		boolean correct = false;
 		int time=2;
 		while (correct == false ) {
