@@ -8,7 +8,7 @@ public class Main {
 		// upper limit for secret number in guessing game
 		int upperBound = 100;
 		NumberGame game = new YourGame (upperBound);
-		GameConsole ui = new GameConsole( );
+		GameSolver ui = new GameSolver( );
 		int solution = ui.play( game );
 		//TODO display the answer returned by play
 		System.out.println("A secret number is "+solution);

@@ -3,7 +3,6 @@ import java.util.Random;
 /**
  * Game of guessing number
  * @author Patcharapol Nirunpornputta
- *
  */
 public class YourGame extends NumberGame {
 	private int upperbound;
@@ -13,7 +12,6 @@ public class YourGame extends NumberGame {
 	
 	/**
 	 * Set an upperbound , create a secret number and provide hint for users
-	 * 
 	 * @param upperbound the maxmimum value of this game
 	 */
 	public YourGame(int upperbound) {
