@@ -4,7 +4,7 @@ import java.util.Random;
  * Game of guessing number
  * @author Patcharapol Nirunpornputta
  */
-public class YourGame extends NumberGame {
+public class PatcharapolGame extends NumberGame {
 	private int upperbound;
 	private int secret;
 	private String hint;
@@ -14,7 +14,7 @@ public class YourGame extends NumberGame {
 	 * Set an upperbound , create a secret number and provide hint for users
 	 * @param upperbound the maxmimum value of this game
 	 */
-	public YourGame(int upperbound) {
+	public PatcharapolGame(int upperbound) {
 		this.upperbound = upperbound;
 		this.secret = getRandomnumber(upperbound);
 		this.hint = "I'm thinking of a number between 1 and " + upperbound;
@@ -63,6 +63,7 @@ public class YourGame extends NumberGame {
 	
 	/**
 	 * Show a game discription
+	 * @return game discription
 	 */
 	@Override
 	public String toString() {
