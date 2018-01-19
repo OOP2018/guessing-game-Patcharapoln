@@ -28,10 +28,7 @@ public class GameSolver {
 		System.out.println(game.toString());
 		boolean correct = false;
 		while (correct == false) {
-			System.out.println("Your answer? ");
-			System.out.println(guess);
 			correct = game.guess(guess);
-			System.out.println(game.getMessage());
 			if (game.getMessage().contains("too small.")) {
 				guess = guess + value;
 			} else if (game.getMessage().contains("too large.")) {
