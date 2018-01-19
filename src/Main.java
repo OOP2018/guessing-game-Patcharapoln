@@ -10,7 +10,6 @@ public class Main {
 		NumberGame game = new PatcharapolGame (upperBound);
 		GameSolver ui = new GameSolver( );
 		int solution = ui.play( game );
-		//TODO display the answer returned by play
 		System.out.println("A secret number is "+solution);
 		System.out.println("You count "+game.getCount()+" times");
 	}

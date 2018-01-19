@@ -25,7 +25,6 @@ public class GameSolver {
 			value = (int) Math.ceil((double) guess / 2);
 		} else
 			value = guess / 2;
-		System.out.println(game.toString());
 		boolean correct = false;
 		while (correct == false) {
 			correct = game.guess(guess);
