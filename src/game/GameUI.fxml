@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GameController">
+   <children>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="598.0" text="Welcome to Guessing game!">
+         <FlowPane.margin>
+            <Insets bottom="5.0" />
+         </FlowPane.margin>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="19.0" prefWidth="608.0" text="Please enter number">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="hint" alignment="CENTER" prefHeight="17.0" prefWidth="606.0">
+         <FlowPane.margin>
+            <Insets bottom="5.0" />
+         </FlowPane.margin>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input" alignment="TOP_LEFT" onAction="#handle" prefHeight="27.0" prefWidth="297.0" />
+   </children>
+   <padding>
+      <Insets left="20.0" right="10.0" />
+   </padding>
+</FlowPane>

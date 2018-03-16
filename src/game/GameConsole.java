@@ -1,11 +1,21 @@
+package game;
+
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Scanner;
 
 /**
  * Play guessing game on the console.
+ * 
  * @author Patcharapol Nirunpornputta
  */
-public class GameConsole {
-	private int count;
+public class GameConsole implements Observer {
+	private PatcharapolGame game;
+
+	public GameConsole(PatcharapolGame game) {
+		this.game = game;
+	}
+
 	/** play the game. */
 	public int play(NumberGame game) {
 		Scanner console = new Scanner(System.in);
@@ -21,5 +31,11 @@ public class GameConsole {
 			System.out.println(game.getMessage());
 		}
 		return guess;
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		System.out.println("Your guess " + game.getCount() + " times");
+
 	}
 }

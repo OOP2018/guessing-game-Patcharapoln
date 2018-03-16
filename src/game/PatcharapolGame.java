@@ -1,3 +1,4 @@
+package game;
 import java.util.Random;
 
 /**
@@ -48,6 +49,8 @@ public class PatcharapolGame extends NumberGame {
 	@Override
 	public boolean guess(int number) {
 		this.count++;
+		setChanged();
+		notifyObservers(number);
 		if (this.secret == number) {
 			setMessage("Correct. The secret is " + this.secret);
 			return true;
