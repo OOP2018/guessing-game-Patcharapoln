@@ -1,8 +1,9 @@
-package game;
+package gameUI;
 
 import java.util.Observable;
 import java.util.Observer;
 
+import game.NumberGame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

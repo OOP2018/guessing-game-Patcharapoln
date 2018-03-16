@@ -1,6 +1,8 @@
-package game;
+package gameUI;
 import java.net.URL;
 
+import game.GameConsole;
+import game.PatcharapolGame;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
