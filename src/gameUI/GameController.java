@@ -9,6 +9,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ * A controller of UI that handle user input and set hint for a user.
+ * @author Patcharapol Nirunpornputta
+ *
+ */
 public class GameController {
 	private NumberGame game;
 	private static int num;
@@ -18,15 +23,27 @@ public class GameController {
 	@FXML
 	private Label hint;
 	
+	/**
+	 * Set controller to work for NumberGame.
+	 * @param game
+	 */
 	public void setController(NumberGame game) {
 		this.game = game;
 	}
+	
+	/**
+	 * Handle user input.
+	 * @param event is an action of user for example press enter.
+	 */
 	public void handle(ActionEvent event) {
 		num = Integer.parseInt(input.getText());
 		game.guess(num);
 		hint.setText(game.getMessage());
 	}
 	
+	/**
+	 * @return number that user input.
+	 */
 	public static int getNum() {
 		return num;
 	}

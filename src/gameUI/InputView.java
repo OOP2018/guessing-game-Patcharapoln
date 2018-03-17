@@ -12,20 +12,34 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * Create a new window which show user input number.
+ * @author Patcharapol Nirunpornputta
+ *
+ */
 public class InputView extends Stage implements Observer {
 
 	private NumberGame game;
 	private Label label = null;
 
+	/**
+	 * Initialize a InputView which show user input number.
+	 */
 	public InputView() {
 		initComponents();
 	}
 
+	/**
+	 * Update user input number.
+	 */
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		displayInput();
 	}
 
+	/**
+	 * For setting up a new window.
+	 */
 	private void initComponents() {
 		HBox root = new HBox();
 		root.setPadding(new Insets(10));
@@ -37,14 +51,20 @@ public class InputView extends Stage implements Observer {
 		root.getChildren().add(label);
 		Scene scene = new Scene(root);
 		this.setScene(scene);
-		this.setTitle("Count");
+		this.setTitle("Guess Number");
 		this.sizeToScene();
 	}
 
+	/**
+	 * Show user input value.
+	 */
 	public void displayInput() {
 		label.setText(GameController.getNum()+ "");
 	}
 
+	/**
+	 * Show a new window and update user input value.
+	 */
 	public void run() {
 		this.show();
 		displayInput();

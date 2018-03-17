@@ -17,20 +17,19 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	static int upperBound = 100;
-
+	/**
+	 * Start an user interface.
+	 */
 	@Override
 	public void start(Stage primaryStage) {
-		PatcharapolGame game = new PatcharapolGame(200);
-		
+		PatcharapolGame game = new PatcharapolGame(200);	
 		try {
 			URL url = this.getClass().getResource("GameUI.fxml");
 			FXMLLoader loader = new FXMLLoader(url);
 			Parent root = loader.load();
 			GameController controller = loader.getController();
 			controller.setController(game);
-			
 			Scene scene = new Scene(root);
-			
 			primaryStage.setScene(scene);
 			primaryStage.sizeToScene();
 			primaryStage.setTitle("Guessing Game");
@@ -39,19 +38,19 @@ public class Main extends Application {
 			e.printStackTrace();
 			return;
 		}
+
 		GameConsole console = new GameConsole(game);
 		game.addObserver(console);
 		
 		CounterView view = new CounterView(game);
-		view.setTitle("Counter");
 		game.addObserver(view);
 		view.run();
 		
 		InputView input = new InputView();
-		input.setTitle("Guess number");
 		game.addObserver(input);
 		input.run();
 	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
