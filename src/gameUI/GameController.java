@@ -38,7 +38,7 @@ public class GameController {
 	public void handle(ActionEvent event) {
 		num = Integer.parseInt(input.getText());
 		game.guess(num);
-		hint.setText(game.getMessage());
+		this.setHint(game.getMessage());
 	}
 	
 	/**
@@ -46,5 +46,13 @@ public class GameController {
 	 */
 	public static int getNum() {
 		return num;
+	}
+	
+	/**
+	 * Set hint for users.
+	 * @param hint
+	 */
+	public void setHint(String hint) {
+		this.hint.setText(hint);
 	}
 }

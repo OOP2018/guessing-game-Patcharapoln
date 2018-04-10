@@ -29,6 +29,7 @@ public class Main extends Application {
 			Parent root = loader.load();
 			GameController controller = loader.getController();
 			controller.setController(game);
+			controller.setHint(game.getMessage());
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.sizeToScene();
